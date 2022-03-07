@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/piece-of-cake.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cachito de Cielo</title>
+  </head>
+  <body>
+    <!-- Navigation section -->
+    <header class="header-pedido">
+      <div class="contenedor">
+        <nav class="navbar">
+          <!-- Logo -->
+          <div class="logo">
+            <img
+              src="./assets/logo3-removebg-preview.png"
+              alt="logo-pasteleria"
+              class="logo-nav"
+            />
+          </div>
+          <!-- Navigation Menu -->
+          <ul class="nav-links">
+            <!-- Using checkbox Hack -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- Navigation Items -->
+            <div class="menu">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/">Acerca de nosotros</a></li>
+              <li><a href="/pedido.html">Pedido</a></li>
+              <li><a href="/perfil.html">Perfil</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Form pedido -->
+    <div class="container-pedido-form">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <h2 class="title-form">Haz tu Pedido</h2>
+          <input type="text" class="field" placeholder="Nombre" />
+          <input type="text" class="field" placeholder="Correo" />
+          <input type="text" class="field" placeholder="Teléfono" />
+          <input type="text" class="field" placeholder="Dirección" />
+          <div class="selection">
+            <label for="sabor">Selecciona el tipo</label>
+            <select name="sabor" id="sabor" class="field">
+              <option value="">Cheesecake</option>
+              <option value="">Tiramisú</option>
+              <option value="">Tres Leches</option>
+              <option value="">Red Velvet</option>
+              <option value="">Vainilla</option>
+              <option value="">Chocolate</option>
+            </select>
+          </div>
+          <div class="selection">
+            <label for="sabor">Selecciona el relleno</label>
+            <select name="sabor" id="sabor" class="field">
+              <option value="">Fresas</option>
+              <option value="">Nuez</option>
+              <option value="">Durazno</option>
+              <option value="">Flan</option>
+              <option value="">Creama batida</option>
+            </select>
+          </div>
+          <div class="selection">
+            <label for="sabor">Selecciona el adorno</label>
+            <select name="sabor" id="sabor" class="field">
+              <option value="vainilla">Betún</option>
+              <option value="vainilla">Texturizado 3D</option>
+              <option value="vainilla">Semi Naked</option>
+              <option value="vainilla">Mármol</option>
+            </select>
+          </div>
+          <!-- <textarea placeholder="Message" class="field"></textarea> -->
+          <button class="btn">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+  </body>
+</html>

@@ -1,0 +1,792 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hubballi", cursive;
+}
+
+body {
+  background-color: white;
+}
+
+/* NAVIGATION STARTS HERE */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo-nav {
+  height: 75px;
+}
+
+.header-index {
+  width: 100%;
+  background: url("./assets/cake2-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center 0;
+  top: -50px;
+}
+
+.header-pedido {
+  width: 100%;
+}
+
+.header-perfil {
+  width: 100%;
+}
+
+.header-index .contenedor {
+  position: relative;
+  height: 1000px;
+}
+
+.header-index .textos {
+  width: 100%;
+  color: grey;
+  position: absolute;
+  top: 35%;
+  margin-top: -52px;
+  margin-left: 30px;
+}
+
+.header-index .textos .nombre {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.header-index .textos .nombre span {
+  font-weight: 300;
+}
+
+.header-index .textos h3 {
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  /* background-color: white; */
+}
+
+.nav-links a {
+  color: grey;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 22px;
+}
+
+.menu a:hover {
+  /* background-color: #db9dc6; */
+  text-decoration: underline;
+  color: black;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #db9dc6;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
+
+/* TIPOS PASTEL */
+.titulo-tipo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 70px;
+  text-decoration: underline;
+}
+.section-tipo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.card-tipo {
+  width: 30%;
+  margin-bottom: 50px;
+}
+
+.card-tipo .img-container {
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-tipo .img-container img {
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.card-tipo:hover .img-container img {
+  transform: scale(1.2);
+}
+
+.card-tipo .info-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(253, 249, 237);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card-tipo .info-container h3 {
+  margin: 0;
+}
+
+.card-tipo .info-container h3,
+.card-tipo .info-container strong,
+.card-tipo .info-container span {
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.card-tipo .make-pedido {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.card-tipo .make-pedido:hover {
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+}
+
+footer .group1 {
+  width: 100%;
+  margin: auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+footer .group1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .group1 .box figure img {
+  width: 200px;
+}
+
+/* FORM PEDIDO */
+.container-pedido-form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.container-pedido-form:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url("./assets/cake1.png") no-repeat center;
+  background-size: contain;
+  filter: blur(50px);
+  z-index: -1;
+}
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.left {
+  background: url("./assets/cake1.png") no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+
+.right {
+  padding: 25px 40px;
+}
+
+h2 .title-form {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+}
+
+h2 .title-form:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #2ecc71;
+}
+
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.selection {
+  display: flex;
+  gap: 35px;
+}
+
+.selection-check {
+  display: flex;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+.field:focus {
+  border: 2px solid rgba(30, 85, 250, 0.47);
+  background-color: #fff;
+}
+
+@media screen and (max-width: 880px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    height: 200px;
+  }
+}
+
+/* TABLA DE INVENTARIOS */
+.table {
+  width: 90%;
+  height: 550px;
+  margin: auto;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.table-container h1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-table {
+  display: flex;
+  gap: 10px;
+}
+
+.title-table img {
+  width: 35px;
+  height: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.table-ingre {
+  text-align: center;
+  width: 100%;
+  height: 350px;
+  overflow-y: scroll;
+}
+
+.table-update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-update img {
+  width: 40px;
+  padding-right: 10px;
+  height: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+table td,
+table th {
+  padding: 8px;
+  text-align: center;
+  color: black;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(253, 249, 237);
+  color: black;
+  text-align: center;
+}
+
+/* Tabla */
+
+.card {
+  width: 90%;
+  margin: auto;
+  height: 400px;
+}
+.card h1 {
+  text-align: center;
+}
+
+.card-item {
+  width: 90%;
+  height: 400px;
+  margin: auto;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-desc {
+  background-color: rgb(253, 249, 237);
+  height: 350px;
+  width: 350px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%;
+  padding: 20px 30px;
+}
+
+@media (max-width: 810px) {
+  /*Pagina principal-------------------------*/
+
+  .menu-hamb {
+    display: block;
+  }
+  .nav-link ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 15;
+    opacity: 0.9;
+    left: 0;
+    background: #283d6d;
+    height: 100%;
+    transform: translateX(-500px);
+  }
+
+  .nav-link ul.nav-items.show {
+    transform: translateX(-20px);
+  }
+
+  .nav-link ul li {
+    padding: 20px;
+  }
+
+  .banner {
+    height: 400px;
+  }
+
+  .message {
+    width: 250px;
+    height: 150px;
+    font-size: 16px;
+  }
+
+  .product-items {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    display: block;
+    align-items: center;
+  }
+
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .items img {
+    border-radius: 50%;
+    width: 130px;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    text-align: center;
+  }
+
+  .item-description p {
+    padding-top: 10px;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .item-description h2 {
+    font-size: 24px;
+  }
+
+  .item-description a {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .personal-cake {
+    width: 90%;
+    margin: auto;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description-custom {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 300px;
+    background: #283d6d;
+  }
+
+  .footer h1 {
+    padding-top: 16px;
+  }
+
+  .footer-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .social-links img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 40px;
+  }
+
+  /*PAgina de acerca de nosotros----------------------------------*/
+  .about-banner {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-items {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .about-img {
+    width: auto;
+    height: 50%;
+  }
+
+  .baker {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-desc {
+    width: auto;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+
+  .about-desc p h1 {
+    text-align: 14px;
+  }
+
+  .pov {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .pov-items {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pov-item {
+    padding: 0;
+  }
+
+  .pov-user {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .map {
+    width: 90%;
+    margin: 0;
+  }
+
+  .map-items {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .map-direction {
+    width: auto;
+    height: 50%;
+  }
+
+  .map-frame {
+    margin: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  .form-container {
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+    height: auto;
+    opacity: 80%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .card-item {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    gap: 30px;
+    display: grid;
+  }
+
+  .card-desc {
+    background-color: #283d6d;
+    height: auto;
+    width: auto;
+  }
+
+  .table {
+    width: 90%;
+    height: 550px;
+    margin: auto;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table-container h1 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .title-table {
+    font-size: 14px;
+    text-align: center;
+    margin-left: 30px;
+  }
+
+  .table-ingre {
+    text-align: center;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+
+  .table-update img {
+    width: 20px;
+    padding-right: 10px;
+    height: 20px;
+  }
+
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+    overflow-x: scroll;
+  }
+}
